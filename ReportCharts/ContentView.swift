@@ -7,13 +7,19 @@
 
 import SwiftUI
 
+struct ChartRange: Identifiable {
+    var id: UUID = UUID()
+    var name: String
+    var x: Date
+    var y: Int
+    var color: Color
+}
+
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        VStack(spacing: 4) {
+            OneDayChartView()
+            ThreeHourChartView()
         }
         .padding()
     }

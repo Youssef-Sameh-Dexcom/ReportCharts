@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C6B8E2F02A9B4E7900D5C827 /* OneDayChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B8E2EF2A9B4E7900D5C827 /* OneDayChartView.swift */; };
+		C6B8E2F22A9B4E8800D5C827 /* ThreeHourChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B8E2F12A9B4E8800D5C827 /* ThreeHourChartView.swift */; };
+		C6B8E2F42A9B4ED600D5C827 /* OneDayChartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B8E2F32A9B4ED600D5C827 /* OneDayChartModel.swift */; };
+		C6B8E2F62A9B4EEA00D5C827 /* ThreeHourChartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B8E2F52A9B4EEA00D5C827 /* ThreeHourChartModel.swift */; };
+		C6B8E2F82A9B517E00D5C827 /* DateProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B8E2F72A9B517E00D5C827 /* DateProvider.swift */; };
 		C6F898362A94C6C700F86AA6 /* ReportChartsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F898352A94C6C700F86AA6 /* ReportChartsApp.swift */; };
 		C6F898382A94C6C800F86AA6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F898372A94C6C800F86AA6 /* ContentView.swift */; };
 		C6F8983A2A94C6C800F86AA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6F898392A94C6C800F86AA6 /* Assets.xcassets */; };
@@ -14,6 +19,7 @@
 		C6F898472A94C6C800F86AA6 /* ReportChartsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F898462A94C6C800F86AA6 /* ReportChartsTests.swift */; };
 		C6F898512A94C6C800F86AA6 /* ReportChartsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F898502A94C6C800F86AA6 /* ReportChartsUITests.swift */; };
 		C6F898532A94C6C800F86AA6 /* ReportChartsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F898522A94C6C800F86AA6 /* ReportChartsUITestsLaunchTests.swift */; };
+		C6F898622A94D7BD00F86AA6 /* EGV.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F898612A94D7BD00F86AA6 /* EGV.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +40,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C6B8E2EF2A9B4E7900D5C827 /* OneDayChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneDayChartView.swift; sourceTree = "<group>"; };
+		C6B8E2F12A9B4E8800D5C827 /* ThreeHourChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeHourChartView.swift; sourceTree = "<group>"; };
+		C6B8E2F32A9B4ED600D5C827 /* OneDayChartModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneDayChartModel.swift; sourceTree = "<group>"; };
+		C6B8E2F52A9B4EEA00D5C827 /* ThreeHourChartModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeHourChartModel.swift; sourceTree = "<group>"; };
+		C6B8E2F72A9B517E00D5C827 /* DateProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateProvider.swift; sourceTree = "<group>"; };
 		C6F898322A94C6C700F86AA6 /* ReportCharts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReportCharts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6F898352A94C6C700F86AA6 /* ReportChartsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportChartsApp.swift; sourceTree = "<group>"; };
 		C6F898372A94C6C800F86AA6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -44,6 +55,7 @@
 		C6F8984C2A94C6C800F86AA6 /* ReportChartsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReportChartsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6F898502A94C6C800F86AA6 /* ReportChartsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportChartsUITests.swift; sourceTree = "<group>"; };
 		C6F898522A94C6C800F86AA6 /* ReportChartsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportChartsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C6F898612A94D7BD00F86AA6 /* EGV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EGV.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +83,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C6B8E2EC2A9B4E4900D5C827 /* Charts */ = {
+			isa = PBXGroup;
+			children = (
+				C6B8E2EF2A9B4E7900D5C827 /* OneDayChartView.swift */,
+				C6B8E2F32A9B4ED600D5C827 /* OneDayChartModel.swift */,
+				C6B8E2F12A9B4E8800D5C827 /* ThreeHourChartView.swift */,
+				C6B8E2F52A9B4EEA00D5C827 /* ThreeHourChartModel.swift */,
+			);
+			path = Charts;
+			sourceTree = "<group>";
+		};
 		C6F898292A94C6C700F86AA6 = {
 			isa = PBXGroup;
 			children = (
@@ -94,10 +117,13 @@
 		C6F898342A94C6C700F86AA6 /* ReportCharts */ = {
 			isa = PBXGroup;
 			children = (
+				C6F898612A94D7BD00F86AA6 /* EGV.swift */,
+				C6B8E2EC2A9B4E4900D5C827 /* Charts */,
 				C6F898352A94C6C700F86AA6 /* ReportChartsApp.swift */,
 				C6F898372A94C6C800F86AA6 /* ContentView.swift */,
 				C6F898392A94C6C800F86AA6 /* Assets.xcassets */,
 				C6F8983B2A94C6C800F86AA6 /* Preview Content */,
+				C6B8E2F72A9B517E00D5C827 /* DateProvider.swift */,
 			);
 			path = ReportCharts;
 			sourceTree = "<group>";
@@ -258,6 +284,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6F898382A94C6C800F86AA6 /* ContentView.swift in Sources */,
+				C6F898622A94D7BD00F86AA6 /* EGV.swift in Sources */,
+				C6B8E2F62A9B4EEA00D5C827 /* ThreeHourChartModel.swift in Sources */,
+				C6B8E2F42A9B4ED600D5C827 /* OneDayChartModel.swift in Sources */,
+				C6B8E2F02A9B4E7900D5C827 /* OneDayChartView.swift in Sources */,
+				C6B8E2F22A9B4E8800D5C827 /* ThreeHourChartView.swift in Sources */,
+				C6B8E2F82A9B517E00D5C827 /* DateProvider.swift in Sources */,
 				C6F898362A94C6C700F86AA6 /* ReportChartsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -417,13 +449,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ReportCharts/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationLandscapeRight;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -445,13 +478,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ReportCharts/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationLandscapeRight;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
