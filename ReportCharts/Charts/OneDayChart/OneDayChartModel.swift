@@ -10,6 +10,8 @@ import Foundation
 class OneDayChartModel {
     var egvs = [EGV]()
     var xAxisValues = [Date]()
+    var yAxisMajorTicks = [Int]()
+    var yAxisValues = [Int]()
     var ranges = [ChartRange]()
     
     private let numberOfReadingsInOneDay = 288
@@ -18,6 +20,7 @@ class OneDayChartModel {
     init() {
         initEGVs()
         initXAxisValues()
+        initYAxisValues()
         initRanges()
     }
     
@@ -40,6 +43,11 @@ class OneDayChartModel {
             result.append(startDate.addingTimeInterval(TimeInterval(index * 60 * 60)))
         }
         xAxisValues = result
+    }
+    
+    private func initYAxisValues() {
+        yAxisMajorTicks = [10, 100, 200, 300, 400]
+        yAxisValues = [50, 100, 150, 200, 250, 300, 350, 400]
     }
     
     private func initRanges() {

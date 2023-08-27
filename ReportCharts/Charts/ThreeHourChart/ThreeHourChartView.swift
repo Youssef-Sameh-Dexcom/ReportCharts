@@ -13,84 +13,20 @@ struct ThreeHourChartView: View {
     
     var body: some View {
         Chart {
-            ForEach(model.ranges, id: \.id) { range in
-                AreaMark(x: .value("", range.x), y: .value("", range.y), stacking: .standard)
-                    .foregroundStyle(range.color)
-                    .foregroundStyle(by: .value("", range.name))
-                    
-            }
+            AlternatingBackground(ranges: model.ranges)
             
-            RuleMark(y: .value("LOW", 110))
-                .foregroundStyle(.red)
-                .lineStyle(StrokeStyle(lineWidth: 2))
-                .annotation(position: AnnotationPosition.leading, spacing: -2) {
-                    Text("110")
-                        .foregroundColor(.white)
-                        .background(content: {
-                            RoundedRectangle(cornerRadius: 10)
-                                .fill(.red)
-                                .frame(width: 32, height: 10)
-                        })
-                        .font(Font.system(size: 8))
-                        .fontWeight(Font.Weight.bold)
-                        
-                }
+            ThresholdMark(threshold: 110, color: .red)
             
-            RuleMark(y: .value("HIGH", 180))
-                .foregroundStyle(.orange)
-                .lineStyle(StrokeStyle(lineWidth: 2))
-                .annotation(position: AnnotationPosition.leading, spacing: -2) {
-                    Text("180")
-                        .foregroundColor(.white)
-                        .background(content: {
-                            RoundedRectangle(cornerRadius: 10)
-                                .fill(.orange)
-                                .frame(width: 32, height: 10)
-                        })
-                        .font(Font.system(size: 8))
-                        .fontWeight(Font.Weight.bold)
-                        
-                }
+            ThresholdMark(threshold: 180, color: .orange)
             
+            EGVPointedLine(egvs: model.egvs)
             
-            ForEach(model.egvs) { egv in
-                LineMark(x: .value("", egv.time), y: .value("", egv.value))
-                    .foregroundStyle(.black)
-                    .lineStyle(StrokeStyle(lineWidth: 4, lineJoin: .round))
-                
-                PointMark(x: .value("", egv.time), y: .value("", egv.value))
-                     .foregroundStyle(.black)
-                    .symbol {
-                        Circle()
-                            .strokeBorder(.white, lineWidth: 2)
-                            .background(Circle().fill(.black))
-                            .frame(width: 10)
-                    }
-                
-            }
-            RuleMark(xStart: 14, xEnd: 675, y: .value("", 425))
-                .foregroundStyle(.gray)
-                .lineStyle(StrokeStyle(lineWidth: 1))
-            RuleMark(xStart: 14, xEnd: 675, y: .value("", 0))
-                .foregroundStyle(.gray)
-                .lineStyle(StrokeStyle(lineWidth: 1))
-            
-            RuleMark(x: .value("", model.xAxisValues.first!))
-                .foregroundStyle(.gray)
-                .lineStyle(StrokeStyle(lineWidth: 1))
-            
-            RuleMark(x: .value("", model.xAxisValues.last!))
-                .foregroundStyle(.gray)
-                .lineStyle(StrokeStyle(lineWidth: 1))
-            
-            
-            
-            
+            Borders(xStart: model.xAxisValues.first!, xEnd: model.xAxisValues.last!, yStart: 0, yEnd: 425)
         }
         .frame(height: 160)
         .chartYAxis {
             AxisMarks(
-                values: [10, 100, 200, 300, 400]
+                values: model.yAxisMajorTicks
             ) { value in
                 let level = value.as(Int.self)
                 AxisValueLabel {
@@ -108,11 +44,13 @@ struct ThreeHourChartView: View {
             }
             
             AxisMarks(
-                values: [50, 100, 150, 200, 250, 300, 350, 400]
+                values: model.yAxisValues
             ) {
                 AxisTick(length: 6)
             }
         }
+        
+        // Currently this is hardcoded to specific hours in real scenario it will be calculated depending on when the session ended.
         .chartXAxis {
             AxisMarks(preset: AxisMarkPreset.aligned, values: model.xAxisValues) { value in
                 if let date = value.as(Date.self) {

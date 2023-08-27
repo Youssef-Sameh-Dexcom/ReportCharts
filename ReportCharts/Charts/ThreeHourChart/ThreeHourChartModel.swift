@@ -11,6 +11,8 @@ import Foundation
 class ThreeHourChartModel {
     var egvs = [EGV]()
     var xAxisValues = [Date]()
+    var yAxisMajorTicks = [Int]()
+    var yAxisValues = [Int]()
     var ranges = [ChartRange]()
     
     private var numberOfReadingsInThreeHours = 35
@@ -19,6 +21,7 @@ class ThreeHourChartModel {
     init() {
         initEGVs()
         initXAxisValues()
+        initYAxisValues()
         initRanges()
     }
     
@@ -41,6 +44,11 @@ class ThreeHourChartModel {
             result.append(startDate.addingTimeInterval(TimeInterval(index * 15 * 60)))
         }
         xAxisValues = result
+    }
+    
+    private func initYAxisValues() {
+        yAxisMajorTicks = [10, 100, 200, 300, 400]
+        yAxisValues = [50, 100, 150, 200, 250, 300, 350, 400]
     }
     
     private func initRanges() {

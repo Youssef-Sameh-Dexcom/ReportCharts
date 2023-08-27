@@ -12,6 +12,7 @@
 		C6B8E2F42A9B4ED600D5C827 /* OneDayChartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B8E2F32A9B4ED600D5C827 /* OneDayChartModel.swift */; };
 		C6B8E2F62A9B4EEA00D5C827 /* ThreeHourChartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B8E2F52A9B4EEA00D5C827 /* ThreeHourChartModel.swift */; };
 		C6B8E2F82A9B517E00D5C827 /* DateProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B8E2F72A9B517E00D5C827 /* DateProvider.swift */; };
+		C6B8E2FE2A9B58E300D5C827 /* CustomChartMarks.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B8E2FD2A9B58E300D5C827 /* CustomChartMarks.swift */; };
 		C6F898362A94C6C700F86AA6 /* ReportChartsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F898352A94C6C700F86AA6 /* ReportChartsApp.swift */; };
 		C6F898382A94C6C800F86AA6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F898372A94C6C800F86AA6 /* ContentView.swift */; };
 		C6F8983A2A94C6C800F86AA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6F898392A94C6C800F86AA6 /* Assets.xcassets */; };
@@ -45,6 +46,7 @@
 		C6B8E2F32A9B4ED600D5C827 /* OneDayChartModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneDayChartModel.swift; sourceTree = "<group>"; };
 		C6B8E2F52A9B4EEA00D5C827 /* ThreeHourChartModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeHourChartModel.swift; sourceTree = "<group>"; };
 		C6B8E2F72A9B517E00D5C827 /* DateProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateProvider.swift; sourceTree = "<group>"; };
+		C6B8E2FD2A9B58E300D5C827 /* CustomChartMarks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomChartMarks.swift; sourceTree = "<group>"; };
 		C6F898322A94C6C700F86AA6 /* ReportCharts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReportCharts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6F898352A94C6C700F86AA6 /* ReportChartsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportChartsApp.swift; sourceTree = "<group>"; };
 		C6F898372A94C6C800F86AA6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 		C6B8E2FC2A9B57A300D5C827 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				C6B8E2FD2A9B58E300D5C827 /* CustomChartMarks.swift */,
 				C6B8E2F72A9B517E00D5C827 /* DateProvider.swift */,
 			);
 			path = Utils;
@@ -320,6 +323,7 @@
 				C6B8E2F62A9B4EEA00D5C827 /* ThreeHourChartModel.swift in Sources */,
 				C6B8E2F42A9B4ED600D5C827 /* OneDayChartModel.swift in Sources */,
 				C6B8E2F02A9B4E7900D5C827 /* OneDayChartView.swift in Sources */,
+				C6B8E2FE2A9B58E300D5C827 /* CustomChartMarks.swift in Sources */,
 				C6B8E2F22A9B4E8800D5C827 /* ThreeHourChartView.swift in Sources */,
 				C6B8E2F82A9B517E00D5C827 /* DateProvider.swift in Sources */,
 				C6F898362A94C6C700F86AA6 /* ReportChartsApp.swift in Sources */,
