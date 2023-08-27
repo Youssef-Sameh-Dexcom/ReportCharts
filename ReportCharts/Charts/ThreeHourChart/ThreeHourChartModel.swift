@@ -1,5 +1,5 @@
 //
-//  OneDayChartModel.swift
+//  ThreeHourChartModel.swift
 //  ReportCharts
 //
 //  Created by Youssef Ghattas on 27/08/2023.
@@ -7,12 +7,13 @@
 
 import Foundation
 
-class OneDayChartModel {
-    @Published var egvs = [EGV]()
-    @Published var xAxisValues = [Date]()
-    @Published var ranges = [ChartRange]()
+
+class ThreeHourChartModel {
+    var egvs = [EGV]()
+    var xAxisValues = [Date]()
+    var ranges = [ChartRange]()
     
-    private let numberOfReadingsInOneDay = 288
+    private var numberOfReadingsInThreeHours = 35
     private let startDate = DateProvider().todayStartDate
     
     init() {
@@ -23,7 +24,7 @@ class OneDayChartModel {
     
     private func initEGVs() {
         var result = [EGV]()
-        for index in 0...numberOfReadingsInOneDay {
+        for index in 0...numberOfReadingsInThreeHours {
             let egv = EGV(
                 id: UUID(),
                 time: startDate.addingTimeInterval(TimeInterval(index * 5 * 60)),
@@ -36,8 +37,8 @@ class OneDayChartModel {
     
     private func initXAxisValues() {
         var result = [Date]()
-        for index in 0...24 {
-            result.append(startDate.addingTimeInterval(TimeInterval(index * 60 * 60)))
+        for index in 0...12 {
+            result.append(startDate.addingTimeInterval(TimeInterval(index * 15 * 60)))
         }
         xAxisValues = result
     }
@@ -64,6 +65,5 @@ class OneDayChartModel {
             ChartRange(name: "9", x: xAxisValues.first!, y: 25, color: .gray.opacity(0.1)),
             ChartRange(name: "9", x: xAxisValues.last!, y: 25, color: .gray.opacity(0.1))
         ]
-
     }
 }

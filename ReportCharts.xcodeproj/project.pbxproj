@@ -86,12 +86,44 @@
 		C6B8E2EC2A9B4E4900D5C827 /* Charts */ = {
 			isa = PBXGroup;
 			children = (
+				C6B8E2F92A9B576C00D5C827 /* OneDayChart */,
+				C6B8E2FA2A9B578100D5C827 /* ThreeHourChart */,
+			);
+			path = Charts;
+			sourceTree = "<group>";
+		};
+		C6B8E2F92A9B576C00D5C827 /* OneDayChart */ = {
+			isa = PBXGroup;
+			children = (
 				C6B8E2EF2A9B4E7900D5C827 /* OneDayChartView.swift */,
 				C6B8E2F32A9B4ED600D5C827 /* OneDayChartModel.swift */,
+			);
+			path = OneDayChart;
+			sourceTree = "<group>";
+		};
+		C6B8E2FA2A9B578100D5C827 /* ThreeHourChart */ = {
+			isa = PBXGroup;
+			children = (
 				C6B8E2F12A9B4E8800D5C827 /* ThreeHourChartView.swift */,
 				C6B8E2F52A9B4EEA00D5C827 /* ThreeHourChartModel.swift */,
 			);
-			path = Charts;
+			path = ThreeHourChart;
+			sourceTree = "<group>";
+		};
+		C6B8E2FB2A9B579B00D5C827 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C6F898612A94D7BD00F86AA6 /* EGV.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C6B8E2FC2A9B57A300D5C827 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				C6B8E2F72A9B517E00D5C827 /* DateProvider.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		C6F898292A94C6C700F86AA6 = {
@@ -117,13 +149,13 @@
 		C6F898342A94C6C700F86AA6 /* ReportCharts */ = {
 			isa = PBXGroup;
 			children = (
-				C6F898612A94D7BD00F86AA6 /* EGV.swift */,
+				C6B8E2FC2A9B57A300D5C827 /* Utils */,
+				C6B8E2FB2A9B579B00D5C827 /* Model */,
 				C6B8E2EC2A9B4E4900D5C827 /* Charts */,
 				C6F898352A94C6C700F86AA6 /* ReportChartsApp.swift */,
 				C6F898372A94C6C800F86AA6 /* ContentView.swift */,
 				C6F898392A94C6C800F86AA6 /* Assets.xcassets */,
 				C6F8983B2A94C6C800F86AA6 /* Preview Content */,
-				C6B8E2F72A9B517E00D5C827 /* DateProvider.swift */,
 			);
 			path = ReportCharts;
 			sourceTree = "<group>";
